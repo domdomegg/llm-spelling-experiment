@@ -1,12 +1,12 @@
 {
-  "name": "typescript-library-template",
+  "name": "llm-spelling-experiment",
   "version": "0.0.0",
-  "description": "Template for creating TypeScript libraries",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/domdomegg/typescript-library-template.git"
+    "url": "https://github.com/domdomegg/llm-spelling-experiment.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,6 +14,7 @@
     "dist"
   ],
   "scripts": {
+    "start": "npm run build && node --env-file=.env dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest --watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
@@ -33,5 +34,13 @@
     "extends": [
       "eslint-config-domdomegg"
     ]
+  },
+  "dependencies": {
+    "@types/node": "^20.11.24",
+    "@types/papaparse": "^5.3.14",
+    "axios": "^1.6.7",
+    "p-limit": "^3.1.0",
+    "p-retry": "^4.6.2",
+    "papaparse": "^5.4.1"
   }
 }
