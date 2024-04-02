@@ -30,6 +30,20 @@ This project also provides general empirical insight into how current LLMs work,
 
 * Can you fine tune an open-source LLM to avoid this penalty? For example, if you inject spelling mistakes into prompt datasets, and then fine-tune on this, does performance on misspelled prompts equal that of correctly spelt ones (ideally of the equivalent chat model).
 
+## Running the code
+
+1. Install Git, Node.js, Python and pipenv
+2. Clone the repository
+3. Install Node.js dependencies with `npm install`
+4. Install [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) with `pipenv install`
+5. Download [`llama-2-7b.Q4_0.gguf`](https://huggingface.co/TheBloke/Llama-2-7B-GGUF/blob/main/llama-2-7b.Q4_0.gguf)
+6. Run the llama-cpp-python server with:
+   ```
+   export MODEL=~/Downloads/llama-2-7b.Q4_0.gguf
+   python3 -m llama_cpp.server --model $MODEL --n_gpu_layers 1
+   ```
+7. Start with `npm start`
+
 ## Contributing
 
 Pull requests are welcomed on GitHub! To get started:

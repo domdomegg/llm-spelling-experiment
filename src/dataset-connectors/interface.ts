@@ -1,4 +1,5 @@
 export type EvaluationQuestion = {
+  id: string,
   prompt: string,
   answer: string,
   choices: string[],
