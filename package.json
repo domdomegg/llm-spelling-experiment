@@ -17,7 +17,7 @@
     "start": "npm run build && node --env-file=.env dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest --watch",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint",
     "clean": "rm -rf dist",
     "build": "tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run clean && npm run build"
@@ -25,15 +25,10 @@
   "devDependencies": {
     "@tsconfig/node-lts": "^22.0.1",
     "@tsconfig/strictest": "^2.0.5",
-    "eslint": "^8.56.0",
-    "eslint-config-domdomegg": "^1.2.3",
+    "eslint": "^9.0.0",
+    "eslint-config-domdomegg": "^2.0.9",
     "typescript": "^5.8.2",
     "vitest": "^3.0.7"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-domdomegg"
-    ]
   },
   "dependencies": {
     "@types/node": "^22.13.9",
