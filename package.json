@@ -28,7 +28,7 @@
     "eslint": "^9.0.0",
     "eslint-config-domdomegg": "^2.0.9",
     "typescript": "^5.8.2",
-    "vitest": "^3.0.7"
+    "vitest": "^3.2.6"
   },
   "dependencies": {
     "@types/node": "^22.13.9",
